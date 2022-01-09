@@ -22,7 +22,7 @@ class Ball{
         pApplet.ellipse(x,y,DIAMETER, DIAMETER);
     }
 }
-public class ProcessingOOP extends PApplet {
+public class FourBallsOOP extends PApplet {
 
     public static final int HEIGHT = 480;
     public static final int WIDTH = 640;
@@ -31,7 +31,7 @@ public class ProcessingOOP extends PApplet {
     ArrayList<Ball>list = new ArrayList<>();
 
     public static void main (String args[]) {
-        PApplet.main("ProcessingOOP",args);
+        PApplet.main("FourBallsOOP",args);
     }
 
     @Override
