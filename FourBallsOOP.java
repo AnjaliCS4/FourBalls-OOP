@@ -28,7 +28,7 @@ public class FourBallsOOP extends PApplet {
     public static final int WIDTH = 640;
     int StartPos = 0;
     int Spacing = HEIGHT/5;
-    ArrayList<Ball>list = new ArrayList<>();
+    ArrayList<Ball>ballList = new ArrayList<>();
 
     public static void main (String args[]) {
         PApplet.main("FourBallsOOP",args);
@@ -42,13 +42,13 @@ public class FourBallsOOP extends PApplet {
     @Override
     public void setup() {
         for(int i=1 ; i<=4 ; i++) {
-            list.add(new Ball(StartPos,Spacing*i,i));
+            ballList.add(new Ball(StartPos,Spacing*i,i));
         }
     }
 
     @Override
     public void draw() {
-        for(Ball ball : list) {
+        for(Ball ball : ballList) {
             ball.move();
             ball.draw(this);
         }
