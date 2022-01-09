@@ -42,7 +42,8 @@ public class FourBallsOOP extends PApplet {
     @Override
     public void setup() {
         for(int i=1 ; i<=4 ; i++) {
-            ballList.add(new Ball(StartPos,Spacing*i,i));
+            int speed = i;
+            ballList.add(new Ball(StartPos,Spacing*i,speed));
         }
     }
 
