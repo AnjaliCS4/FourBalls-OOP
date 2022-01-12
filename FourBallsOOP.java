@@ -1,37 +1,18 @@
 import processing.core.PApplet;
+
 import java.util.ArrayList;
 
-class Ball{
-    public static final int DIAMETER = 25;
-    private int x;
-    private int y;
-    private int speed;
 
-    Ball(int x, int y, int speed) {
-        this.x = x;
-        this.y = y;
-        this.speed = speed;
-    }
-    public void move()
-    {
-        x+=speed;
-    }
-
-    public void draw(PApplet pApplet)
-    {
-        pApplet.ellipse(x,y,DIAMETER, DIAMETER);
-    }
-}
 public class FourBallsOOP extends PApplet {
 
     public static final int HEIGHT = 480;
     public static final int WIDTH = 640;
     int StartPos = 0;
-    int Spacing = HEIGHT/5;
-    ArrayList<Ball>ballList = new ArrayList<>();
+    int Spacing = HEIGHT / 5;
+    ArrayList<Ball> ballList = new ArrayList<>();
 
-    public static void main (String args[]) {
-        PApplet.main("FourBallsOOP",args);
+    public static void main(String args[]) {
+        PApplet.main("FourBallsOOP", args);
     }
 
     @Override
@@ -41,17 +22,16 @@ public class FourBallsOOP extends PApplet {
 
     @Override
     public void setup() {
-        for(int i=1 ; i<=4 ; i++) {
+        for (int i = 1; i <= 4; i++) {
             int speed = i;
-            ballList.add(new Ball(StartPos,Spacing*i,speed));
+            ballList.add(new Ball(StartPos, Spacing * i, speed));
         }
     }
 
     @Override
     public void draw() {
-        for(Ball ball : ballList) {
+        for (Ball ball : ballList) {
             ball.move();
             ball.draw(this);
         }
     }
-}
